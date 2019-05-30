@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+
+<section class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-2">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+				<h2 class="mb-4">Articles</h2>
+			</div>
+		</div>
+		<div class="row">
+			{% assign psize = site.posts | size %}
+			{% if psize == 0 %}
+			<h3>Oh noes, there's nothing here</h3>
+			{% else %}
+			{% for post in site.posts %}
+			<div class="col-md-4">
+				<div class="blog-entry ftco-animate">
+					<a href="#" class="img img-2" style="background-image: url({{post.featured-image}});"></a>
+					<div class="text text-2 pt-2 mt-3">
+						<span class="category mb-3 d-block">{{post.categories}}</span>
+						<h3 class="mb-4"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h3>
+						<p class="mb-4">{{ post.content | strip_html | truncatewords:20}}</p>
+						<div class="author mb-4 d-flex align-items-center">
+							<div class="ml-3 info">
+								<span>Written by</span>
+								<h3>{{post.author}}, <span>{{ post.date | date: "%b %-d, %Y" }}</span></h3>
+							</div>
+						</div>
+						<div class="meta-wrap align-items-center">
+							<div class="half">
+								<p><a href="{{ post.url | prepend: site.baseurl }}" class="btn py-2">Continue Reading <span
+											class="ion-ios-arrow-forward"></span></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+</section>

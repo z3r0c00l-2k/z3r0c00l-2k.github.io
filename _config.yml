@@ -1,0 +1,18 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: z3r0c00l_2k's Blog
+email: z3r0c00l_2k@pm.me
+description: "Just a personal blog now... more on the way..."
+repository: z3r0c00l-2k/z3r0c00l-2k.github.io
+url: "https://z3r0c00l-2k.github.io/" # the base hostname & protocol for your site
+twitter_username: z3r0c00l_2k
+github_username:  z3r0c00l-2k
+
+# Build settings
+markdown: kramdown
